@@ -4,7 +4,7 @@ import './PlayerCard.css'
 
 const PlayerCard = ({player}) => {
     return (
-        <div className='playerContainer'>
+        <div data-testid='playercard' className='playerContainer'>
             <div className='playerCard'>
                 <p>Player Name: {player.name}</p>
                 <p>Country: {player.country}</p>
