@@ -4,7 +4,6 @@ import './App.css';
 import PlayerGrid from './components/PlayerGrid';
 
 class App extends React.Component {
-  
   state = {
     player: []
   }
@@ -20,7 +19,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <p>Test</p>
         <PlayerGrid players={this.state.player}/>
       </div>
     );
