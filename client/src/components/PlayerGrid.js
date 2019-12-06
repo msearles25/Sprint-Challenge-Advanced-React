@@ -6,7 +6,7 @@ import { useDarkMode } from '../hooks/useDarkMode';
 
 const PlayerGrid = ({ players }) => {
 
-    const [darkMode, setDarkMode] = useDarkMode(false)
+    const [darkMode, setDarkMode] = useDarkMode('darkmode',false)
 
     const toggleDark = e => {
         e.preventDefault();

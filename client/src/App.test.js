@@ -10,4 +10,4 @@ test('darkmode is rendered', () => {
   const {getByText} = render(<App />);
 
   getByText(/dark mode/i)
-})
+});
