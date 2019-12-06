@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import PlayerGrid from './components/PlayerGrid';
+
+class App extends React.Component {
+  
+  state = {
+    player: []
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:5000/api/players')
+      .then(res => res.json())
+      .then(res => res.map(players => {
+        this.setState({player: [...this.state.player, players]})
+      }))
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <p>Test</p>
+        <PlayerGrid players={this.state.player}/>
+      </div>
+    );
+  }
 }
 
 export default App;
