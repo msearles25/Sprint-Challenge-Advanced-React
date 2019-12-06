@@ -18,7 +18,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <div data-testid='main' className="App">
         <PlayerGrid players={this.state.player}/>
       </div>
     );

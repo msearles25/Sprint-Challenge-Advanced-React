@@ -11,3 +11,9 @@ test('darkmode is rendered', () => {
 
   getByText(/dark mode/i)
 });
+
+test('main div is rendered', () => {
+  const {getByTestId} = render(<App />);
+
+  getByTestId(/main/i)
+});
