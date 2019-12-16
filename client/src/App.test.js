@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import App from './App';
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  render(<App />)
+});
+
+test('darkmode is rendered', () => {
+  const {getByText} = render(<App />);
+
+  getByText(/dark mode/i)
+});
+
+test('main div is rendered', () => {
+  const {getByTestId} = render(<App />);
+
+  getByTestId(/main/i)
 });

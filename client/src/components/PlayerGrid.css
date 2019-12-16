@@ -1,0 +1,9 @@
+.players {
+    /* max-width: 500px; */
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 5px solid black;
+    background: #ff9e9e;
+}

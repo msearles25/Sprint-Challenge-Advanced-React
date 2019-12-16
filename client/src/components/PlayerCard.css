@@ -1,0 +1,11 @@
+.playerContainer {
+    max-width: 300px;
+    width: 250px;
+}
+
+.playerContainer {
+    border: 4px solid black;
+    text-align: center;
+    margin: 30px 50px;
+    background: #6da772;
+}
